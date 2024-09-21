@@ -3,6 +3,5 @@
  * @copyright Copyright (c) 2024
  */
 
-export function testFunc(): void {
-    console.log('Test success.');
-}
+export { HotKey } from './HotKey';
+export * from './HotKey.types';
