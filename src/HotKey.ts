@@ -12,6 +12,7 @@ export class HotKey {
     public alt: boolean;
     public ctrl: boolean;
     public shift: boolean;
+    public target: HTMLElement;
     public callback: HotKeyCallback;
 
     /**
@@ -33,8 +34,14 @@ export class HotKey {
         this.ctrl = options.ctrl ?? false;
         this.shift = options.shift ?? false;
 
+        this.target = options.target ?? document.body;
+
         // Register the new HotKey after creating it
-        HotKeyMap.addHotKey(this, options.target ?? document.body);
+        HotKeyMap.addHotKey(this);
+    }
+
+    unbind() {
+        HotKeyMap.removeHotKey(this);
     }
 
     satisfiesEvent(event: KeyboardEvent): boolean {

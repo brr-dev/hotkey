@@ -6,8 +6,14 @@
 import { HotKey } from './HotKey';
 
 class _HotKeyMap extends Map<HTMLElement, Set<HotKey>> {
-    addHotKey(hotkey: HotKey, target: HTMLElement): void {
-        this._getCollectionForTarget(target).add(hotkey);
+    addHotKey(hotkey: HotKey): void {
+        this._getCollectionForTarget(hotkey.target).add(hotkey);
+    }
+
+    removeHotKey(hotkey: HotKey): void {
+        if (this.has(hotkey.target)) {
+            this.get(hotkey.target)?.delete(hotkey);
+        }
     }
 
     private _getCollectionForTarget(target: HTMLElement): Set<HotKey> {
