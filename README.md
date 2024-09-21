@@ -1,3 +1,3 @@
 # @brr-dev/hotkey
 
-A simple, lightweight hotkey-binding framework with no external dependencies.
+A simple, lightweight library for binding hotkeys using Vanilla JS, with no external dependencies.

@@ -1,8 +1,12 @@
 {
   "version": "1.0.0",
-  "name": "@brr-dev/typescript-package-template",
-  "description": "A template repo for bundling TypeScript packages.",
+  "name": "@brr-dev/hotkey",
+  "description": "A simple, lightweight library for binding hotkeys using Vanilla JS, with no external dependencies.",
   "author": "Brandon Ramirez <brandon@brr.dev>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brr-dev/hotkey.git"
+  },
   "license": "MIT",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -12,7 +16,8 @@
   ],
   "scripts": {
     "build": "tsup",
-    "text": "jest"
+    "text": "jest",
+    "prepare": "pnpm build"
   },
   "keywords": [
     "template",
