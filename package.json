@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "@brr-dev/hotkey",
   "description": "A simple, lightweight library for binding hotkeys using Vanilla JS, with no external dependencies.",
   "author": "Brandon Ramirez <brandon@brr.dev>",
