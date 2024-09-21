@@ -11,7 +11,7 @@ export type HotKeyOptions = {
     callback: HotKeyCallback;
 
     // Optional target override, defaults to the document body
-    target: HTMLElement;
+    target?: HTMLElement;
 
     // Optional modifiers, default to false
     ctrl?: boolean;
